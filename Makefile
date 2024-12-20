@@ -14,5 +14,17 @@ functions.o: functions.c header.h
 checkValidate.o: checkValidate.c header.h
 	$(CC) -c checkValidate.c
 
+test1: 
+	./sed_simplified input.txt -r "new" "prog"
+
+test2:
+	./sed_simplified input.txt -i -f "mega"
+
+test3:
+	./sed_simplified input.txt -i -b "lol"
+
+test4:
+	./sed_simplified input.txt -d "prog"
+
 clean:
 	rm -f *.o sed_simplified
